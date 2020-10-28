@@ -1,0 +1,517 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/container"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/settingsbg"
+    >
+
+    <androidx.swiperefreshlayout.widget.SwipeRefreshLayout
+        android:layout_above="@+id/banner_container"
+
+        android:id="@+id/swipe_refresh_layout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+
+        >
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        >
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="?actionBarSize"
+                >
+                <ImageView
+                    android:layout_width="match_parent"
+                    android:layout_height="?actionBarSize"
+                    android:background="@drawable/settingsbg_strip">
+
+                </ImageView>
+
+                <LinearLayout
+                    android:id="@+id/learningprogress"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/userdes"
+
+
+                    android:orientation="horizontal"
+                    >
+
+
+                    <LinearLayout
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="0.8"
+
+                        android:gravity="center">
+
+                        <TextView
+                            android:id="@+id/wallet_money"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Wallet 0    Freecoins 0"
+                            android:layout_gravity="top"
+                            android:layout_marginTop="2dp"
+                            android:textStyle="bold"
+                            android:textAppearance="@style/TextAppearance.AppCompat.Subhead"
+                            android:textColor="@color/white"
+                            android:shadowDy="2"
+                            android:shadowDx="2"
+                            android:shadowRadius="1"
+                            android:shadowColor="@color/text_themecolor1"
+                            android:textAllCaps="true"
+
+                            >
+
+                        </TextView>
+                    </LinearLayout>
+
+                    <!--<LinearLayout
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="0.45"
+                        android:layout_gravity="center"
+                        android:gravity="center">
+
+                        <TextView
+                            android:id="@+id/free_coins"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Free coins 500"
+                            android:textAppearance="@style/TextAppearance.AppCompat.Subhead"
+                            android:textColor="@color/white"
+                            android:layout_marginLeft="5dp"
+                            android:layout_gravity="top"
+                            android:textAllCaps="true"
+                            >
+
+                        </TextView>
+                    </LinearLayout>-->
+
+                    <LinearLayout
+
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="0.1"
+                        >
+                        <ImageView
+                            android:id="@+id/info"
+                            android:layout_width="30dp"
+                            android:layout_height="30dp"
+                            android:src="@drawable/ic_image_help"
+                            android:layout_gravity="top"
+
+                            android:foreground="?selectableItemBackgroundBorderless">
+
+                        </ImageView>
+
+                    </LinearLayout>
+                    <LinearLayout
+                        android:id="@+id/rootview"
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="0.1"
+                        android:layout_gravity="center"
+                        android:gravity="center">
+                        <ImageView
+                            android:id="@+id/refresh"
+                            android:layout_width="30dp"
+                            android:layout_height="30dp"
+                            android:src="@drawable/ic_refresh"
+                            android:layout_gravity="top"
+                            android:foreground="?selectableItemBackgroundBorderless"
+                            android:visibility="gone">
+
+                        </ImageView>
+
+                    </LinearLayout>
+                </LinearLayout>
+
+            </RelativeLayout>
+
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+
+                android:orientation="vertical">
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerInParent="true"
+                    android:scaleType="centerCrop"
+                    android:background="@drawable/logo_1">
+
+                </ImageView>
+
+            </RelativeLayout>
+
+
+        </LinearLayout>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            >
+
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="0.1"
+                android:orientation="vertical">
+
+                <com.thambola.fungola.Animation.Rainbowtextanimation
+                    android:id="@+id/username"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerInParent="true"
+                    android:text="@string/hello_lucky"
+                    android:textColor="@color/white"
+                    android:textAllCaps="true"
+                    android:textAlignment="center"
+                    android:shadowDy="2"
+                    android:shadowDx="2"
+                    android:shadowRadius="1"
+                    android:shadowColor="@color/black"
+                    android:textAppearance="@style/TextAppearance.AppCompat.Title"
+                    >
+
+                </com.thambola.fungola.Animation.Rainbowtextanimation>
+                <!--<TextView
+                    android:textStyle="bold"
+                    android:id="@+id/username"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                   android:layout_centerInParent="true"
+                    android:text="@string/hello_lucky"
+                    android:textColor="@color/white"
+                    android:textAllCaps="true"
+                    android:textAlignment="center"
+                    android:textAppearance="@style/TextAppearance.AppCompat.Title"
+                     />-->
+            </RelativeLayout>
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="0.45"
+                android:orientation="vertical">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="0dp"
+                    android:layout_weight="1"
+                    android:orientation="horizontal"
+                    android:layout_marginRight="25dp"
+                    android:layout_marginLeft="25dp">
+
+                    <ImageView
+                        android:id="@+id/ic_public"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:text="@string/Public"
+                        android:textAllCaps="true"
+
+                        android:textStyle="bold"
+                        android:textAlignment="center"
+                        android:layout_gravity="bottom"
+                        android:gravity="bottom"
+
+                        android:textAppearance="@style/TextAppearance.AppCompat.Title"
+                        android:textColor="@color/grey_90"
+                        android:src="@drawable/ic_main_public"
+                        android:clickable="true"
+                        android:scaleType="fitCenter"
+                        android:foreground="?attr/selectableItemBackgroundBorderless"/>
+                    <ImageView
+                        android:id="@+id/ic_private"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:text="@string/free"
+                        android:textAllCaps="true"
+
+                        android:textStyle="bold"
+                        android:textAlignment="center"
+                        android:layout_gravity="bottom"
+                        android:gravity="bottom"
+
+                        android:textAppearance="@style/TextAppearance.AppCompat.Title"
+                        android:textColor="@color/grey_90"
+                        android:src="@drawable/ic_main_private"
+                        android:clickable="true"
+                        android:scaleType="fitCenter"
+                        android:foreground="?attr/selectableItemBackgroundBorderless"
+                        >
+                    </ImageView>
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="0dp"
+                    android:layout_weight="1"
+                    android:orientation="horizontal"
+                    android:layout_marginRight="25dp"
+                    android:layout_marginLeft="25dp"
+                    >
+
+                    <ImageView
+                        android:id="@+id/ic_free"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:text="@string/Public"
+                        android:textAllCaps="true"
+                        android:layout_gravity="top"
+                        android:gravity="top"
+                        android:textStyle="bold"
+                        android:textAlignment="center"
+
+                        android:textAppearance="@style/TextAppearance.AppCompat.Title"
+                        android:textColor="@color/grey_90"
+                        android:src="@drawable/ic_main_free"
+                        android:clickable="true"
+                        android:scaleType="fitCenter"
+                        android:foreground="?attr/selectableItemBackgroundBorderless"/>
+                    <ImageView
+                        android:id="@+id/ic_wallet"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:text="@string/free"
+                        android:textAllCaps="true"
+
+                        android:textStyle="bold"
+                        android:textAlignment="center"
+                        android:layout_gravity="top"
+                        android:gravity="top"
+
+                        android:textAppearance="@style/TextAppearance.AppCompat.Title"
+                        android:textColor="@color/grey_90"
+                        android:src="@drawable/ic_main_wallet"
+                        android:clickable="true"
+                        android:scaleType="fitCenter"
+                        android:foreground="?attr/selectableItemBackgroundBorderless"
+                        >
+                    </ImageView>
+                </LinearLayout>
+
+            </LinearLayout>
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="0.05"
+                android:orientation="vertical">
+            </RelativeLayout>
+            <!--<LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="0.1"
+                android:orientation="vertical">
+            </LinearLayout>-->
+
+
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="0.2"
+                android:orientation="horizontal"
+                android:layout_marginRight="10dp"
+                android:layout_marginLeft="10dp">
+                <ImageView
+                    android:id="@+id/ic_account"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="@string/Public"
+                    android:textAllCaps="true"
+
+                    android:textStyle="bold"
+                    android:textAlignment="center"
+                    android:layout_gravity="center"
+                    android:gravity="center"
+
+                    android:textAppearance="@style/TextAppearance.AppCompat.Title"
+                    android:textColor="@color/grey_90"
+                    android:src="@drawable/ic_main_account"
+                    android:clickable="true"
+                    android:scaleType="fitCenter"
+                    android:foreground="?attr/selectableItemBackgroundBorderless"/>
+                <ImageView
+                    android:id="@+id/ic_rate"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="@string/free"
+                    android:textAllCaps="true"
+
+                    android:textStyle="bold"
+                    android:textAlignment="center"
+                    android:layout_gravity="center"
+                    android:gravity="center"
+
+                    android:textAppearance="@style/TextAppearance.AppCompat.Title"
+                    android:textColor="@color/grey_90"
+                    android:src="@drawable/ic_main_rate"
+                    android:clickable="true"
+                    android:scaleType="fitCenter"
+                    android:foreground="?attr/selectableItemBackgroundBorderless"
+                    >
+                </ImageView>
+                <ImageView
+                    android:id="@+id/ic_share"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="@string/Public"
+                    android:textAllCaps="true"
+                    android:padding="5dp"
+                    android:textStyle="bold"
+                    android:textAlignment="center"
+                    android:layout_gravity="center"
+                    android:gravity="center"
+
+                    android:textAppearance="@style/TextAppearance.AppCompat.Title"
+                    android:textColor="@color/grey_90"
+                    android:src="@drawable/ic_main_share"
+                    android:clickable="true"
+                    android:scaleType="fitCenter"
+                    android:foreground="?attr/selectableItemBackgroundBorderless"/>
+
+
+            </LinearLayout>
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="0.05"
+                android:orientation="vertical">
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="0.15"
+                android:orientation="vertical"
+                android:layout_marginRight="15dp"
+                android:layout_marginLeft="15dp">
+
+                <ImageView
+                    android:id="@+id/ic_reward_video"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentLeft="true"
+                    android:text="@string/Public"
+                    android:textAllCaps="true"
+                    android:padding="5dp"
+                    android:textStyle="bold"
+                    android:textAlignment="center"
+                    android:layout_gravity="center"
+                    android:gravity="center"
+
+                    android:textAppearance="@style/TextAppearance.AppCompat.Title"
+                    android:textColor="@color/grey_90"
+                    android:src="@drawable/ic_main_rewardadd"
+                    android:clickable="true"
+                    android:scaleType="fitCenter"
+                    android:foreground="?attr/selectableItemBackgroundBorderless"/>
+
+                <ImageView
+                    android:id="@+id/ic_spinwin"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:layout_weight="1"
+                    android:text="@string/Public"
+                    android:textAllCaps="true"
+                    android:padding="5dp"
+                    android:textStyle="bold"
+                    android:textAlignment="center"
+                    android:layout_gravity="center"
+                    android:gravity="center"
+
+                    android:textAppearance="@style/TextAppearance.AppCompat.Title"
+                    android:textColor="@color/grey_90"
+                    android:src="@drawable/ic_main_spin"
+                    android:clickable="true"
+                    android:scaleType="fitCenter"
+                    android:foreground="?attr/selectableItemBackgroundBorderless"/>
+
+            </RelativeLayout>
+
+
+        </LinearLayout>
+
+        <!--<LinearLayout
+
+            android:layout_alignParentBottom="true"
+            android:id="@+id/banner_container"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:layout_centerHorizontal="true"
+            android:layout_centerInParent="true"
+            android:layout_gravity="center"
+            android:layout_marginBottom="3dp"
+            android:layout_marginTop="3dp"
+            android:visibility="visible"
+            />-->
+    </LinearLayout>
+    </androidx.swiperefreshlayout.widget.SwipeRefreshLayout>
+
+
+    <com.startapp.sdk.ads.banner.Banner
+        android:layout_alignParentBottom="true"
+        android:id="@+id/banner_container"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:layout_centerHorizontal="true"
+        android:layout_centerInParent="true"
+        android:layout_gravity="center"
+        android:layout_marginBottom="3dp"
+        android:layout_marginTop="3dp"
+        android:visibility="visible" />
+
+
+    <!--<include
+        layout="@layout/activity_dashboard"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"
+        />-->
+
+    <!--<FrameLayout
+        android:id="@+id/frame_container"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        app:layout_behavior="@string/appbar_scrolling_view_behavior" />-->
+
+   <!-- <com.google.android.material.bottomnavigation.BottomNavigationView
+        android:id="@+id/navigation"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_gravity="bottom"
+        android:background="@color/green_50"
+        app:itemIconTint="@drawable/color_state_primary"
+        app:itemTextColor="@drawable/color_state_primary"
+        app:menu="@menu/menu_bottom_navigation_basic" />-->
+
+
+</RelativeLayout>

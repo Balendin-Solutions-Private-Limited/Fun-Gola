@@ -1,0 +1,914 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.coordinatorlayout.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:card_view="http://schemas.android.com/apk/res-auto"
+    android:fitsSystemWindows="true"
+    android:background="@drawable/settingsbg"
+    >
+
+    <!--<RelativeLayout
+        android:id="@+id/videoview_layout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+    </RelativeLayout>-->
+    <VideoView
+        android:id="@+id/win_animation"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:visibility="visible"
+        android:layout_centerInParent="true"
+
+
+        >
+
+    </VideoView>
+    <RelativeLayout
+        android:id="@+id/videoview_layout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@drawable/settingsbg"
+        android:alpha="0.5">
+
+    </RelativeLayout>
+
+   <!-- <com.thambola.fungola.WinAnimation.newpaint.PaintView
+        android:id="@+id/painview"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent">
+
+    </com.thambola.fungola.WinAnimation.newpaint.PaintView>-->
+
+    <androidx.core.widget.NestedScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:scrollbars="none"
+        android:scrollingCache="true"
+
+        >
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            android:paddingTop="@dimen/spacing_large"
+            android:layout_marginBottom="?attr/actionBarSize">
+            <RelativeLayout
+                android:id="@+id/nativelayout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+
+
+                android:layout_gravity="center"
+                android:gravity="center">
+
+                <com.startapp.sdk.ads.banner.Mrec
+                    android:id="@+id/startAppMrec"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerHorizontal="true" />
+
+               <!-- <com.facebook.ads.NativeAdLayout
+                    android:id="@+id/native_ad_container"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    androidrientation="vertical" />
+-->
+            </RelativeLayout>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <TextView
+            android:layout_marginTop="30dp"
+            android:layout_marginLeft="20dp"
+            android:layout_marginRight="20dp"
+            android:layout_gravity="left"
+            android:id="@+id/heading"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="You Have Successfully Finished The Game"
+            android:textAppearance="@style/TextAppearance.AppCompat.Title"
+            android:textColor="@color/white"
+            android:textStyle="bold"
+            android:gravity="center"
+
+            tools:ignore="RtlCompat" />
+
+        <HorizontalScrollView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:scrollbarThumbHorizontal="@color/text_themecolor2"
+            android:fadeScrollbars="false">
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="horizontal">
+
+                <RelativeLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:gravity="center"
+                    android:layout_marginTop="10dp"
+                    android:layout_marginLeft="20dp"
+                    >
+
+                    <include layout="@layout/game_win_money"
+
+                        />
+
+                </RelativeLayout>
+                <RelativeLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:gravity="center"
+                    android:layout_marginTop="10dp"
+                    android:layout_marginLeft="20dp"
+                    >
+
+                    <include layout="@layout/game_winners" />
+
+                </RelativeLayout>
+                <RelativeLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:gravity="center"
+                    android:layout_marginTop="10dp"
+                    android:layout_marginRight="20dp"
+                    android:layout_marginLeft="20dp"
+                    >
+
+                    <include layout="@layout/game_users"
+
+                        />
+
+                </RelativeLayout>
+                <RelativeLayout
+                    android:id="@+id/coinsboardcard"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:gravity="center"
+                    android:layout_marginTop="10dp"
+                    android:layout_marginLeft="20dp"
+
+                    >
+
+                    <include layout="@layout/previous_numbers"
+
+                        />
+
+                </RelativeLayout>
+            </LinearLayout>
+
+        </HorizontalScrollView>
+
+
+        <!--<androidx.cardview.widget.CardView
+            xmlns:android="http://schemas.android.com/apk/res/android"
+            xmlns:card_view="http://schemas.android.com/apk/res-auto"
+            xmlns:tools="http://schemas.android.com/tools"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_margin="2dp"
+            card_view:cardBackgroundColor="#fff"
+            card_view:cardCornerRadius="5dp"
+
+
+            card_view:cardElevation="4dp"
+            card_view:cardUseCompatPadding="true">
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical">
+
+                <LinearLayout
+                    android:id="@+id/hearlayout3"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:layout_marginTop="5dp">
+
+                    <TextView
+                        android:id="@+id/textView1_3"
+                        style="@style/TextAppearance.AppCompat.Medium"
+                        android:layout_width="0dp"
+                        android:layout_weight="0.32"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentTop="true"
+                        android:padding="5dp"
+                        android:gravity="center"
+                        android:text="Game Type"
+                        android:textColor="@color/grey_60"
+                        android:textStyle="bold" />
+                    <TextView
+                        android:id="@+id/textView2_3"
+                        style="@style/TextAppearance.AppCompat.Medium"
+                        android:layout_width="0dp"
+                        android:layout_weight="0.34"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentTop="true"
+                        android:padding="5dp"
+                        android:gravity="center"
+                        android:text="Win Amount"
+                        android:textColor="@color/grey_60"
+                        android:textStyle="bold" />
+                    <TextView
+                        android:id="@+id/textView3"
+                        style="@style/TextAppearance.AppCompat.Medium"
+                        android:layout_width="0dp"
+                        android:layout_weight="0.34"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentTop="true"
+                        android:padding="5dp"
+                        android:gravity="center"
+                        android:text="You Earn"
+                        android:textColor="@color/grey_60"
+                        android:textStyle="bold" />
+                </LinearLayout>
+
+
+                <LinearLayout
+                    android:layout_below="@+id/hearlayout3"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:layout_marginBottom="10dp"
+                    android:layout_marginTop="10dp">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="0dp"
+                        android:layout_weight="1"
+                        android:orientation="horizontal">
+
+                        <TextView
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+                            android:layout_margin="5dp"
+                            android:layout_weight="0.32"
+                            android:background="@drawable/gradientblue"
+                            android:gravity="center"
+                            android:padding="@dimen/spacing_small"
+                            android:text="  First Five  "
+                            android:textColor="@color/white"
+                            android:typeface="serif">
+
+                        </TextView>
+
+                        <TextView
+                            android:id="@+id/winner_f51"
+                            style="@style/TextAppearance.AppCompat.SearchResult.Subtitle"
+                            android:layout_width="0dp"
+                            android:layout_weight="0.34"
+                            android:layout_height="wrap_content"
+                            android:layout_alignParentTop="true"
+                            android:layout_margin="5dp"
+
+                            android:gravity="center"
+                            android:layout_gravity="center"
+                            android:typeface="serif"
+                            android:textColor="@color/grey_60"
+
+                            />
+                        <TextView
+                            android:id="@+id/winner_f5_user"
+                            style="@style/TextAppearance.AppCompat.SearchResult.Subtitle"
+                            android:layout_width="0dp"
+                            android:layout_weight="0.34"
+                            android:layout_height="wrap_content"
+                            android:layout_alignParentTop="true"
+                            android:layout_margin="5dp"
+                            android:text="0"
+                            android:gravity="center"
+                            android:layout_gravity="center"
+                            android:typeface="serif"
+                            android:textColor="@color/grey_60"
+
+                            />
+
+
+                    </LinearLayout>
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="0dp"
+                        android:layout_weight="1"
+                        android:orientation="horizontal">
+
+
+                        <TextView
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="0.32"
+                            android:textColor="@color/white"
+                            android:text="  Line One  "
+                            android:gravity="center"
+                            android:layout_margin="5dp"
+                            android:padding="@dimen/spacing_small"
+                            android:typeface="serif"
+                            android:layout_gravity="center"
+                            android:background="@drawable/gradientoyellow">
+
+                        </TextView>
+
+                        <TextView
+                            android:id="@+id/winner_l11"
+                            style="@style/TextAppearance.AppCompat.SearchResult.Subtitle"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_alignParentTop="true"
+                            android:layout_gravity="center"
+                            android:layout_margin="5dp"
+                            android:layout_weight="0.34"
+                            android:text=""
+                            android:gravity="center"
+                            android:textColor="@color/grey_60"
+                            android:typeface="serif" />
+                        <TextView
+                            android:id="@+id/winner_l1_user"
+                            style="@style/TextAppearance.AppCompat.SearchResult.Subtitle"
+                            android:layout_width="0dp"
+                            android:layout_weight="0.34"
+                            android:layout_height="wrap_content"
+                            android:layout_alignParentTop="true"
+                            android:layout_margin="5dp"
+                            android:text="0"
+                            android:gravity="center"
+                            android:textColor="@color/grey_60"
+                            android:typeface="serif"
+                            android:layout_gravity="center"
+                            />
+
+
+                    </LinearLayout>
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="0dp"
+                        android:layout_weight="1"
+                        android:orientation="horizontal">
+
+                        <TextView
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="0.32"
+                            android:textColor="@color/white"
+                            android:text="  Line Two  "
+                            android:gravity="center"
+                            android:layout_margin="5dp"
+                            android:padding="@dimen/spacing_small"
+                            android:typeface="serif"
+                            android:layout_gravity="center"
+
+                            android:background="@drawable/gradienskyblue">
+
+                        </TextView>
+
+                        <TextView
+                            android:id="@+id/winner_l21"
+                            style="@style/TextAppearance.AppCompat.SearchResult.Subtitle"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_alignParentTop="true"
+                            android:layout_margin="5dp"
+                            android:layout_weight="0.34"
+                            android:text=""
+                            android:gravity="center"
+                            android:textColor="@color/grey_60"
+                            android:typeface="serif"
+                            android:layout_gravity="center"
+                            />
+                        <TextView
+                            android:id="@+id/winner_l2_user"
+                            style="@style/TextAppearance.AppCompat.SearchResult.Subtitle"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_alignParentTop="true"
+                            android:layout_margin="5dp"
+                            android:layout_weight="0.34"
+                            android:text="0"
+                            android:gravity="center"
+                            android:textColor="@color/grey_60"
+                            android:typeface="serif"
+                            android:layout_gravity="center"
+                            />
+
+
+                    </LinearLayout>
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="0dp"
+                        android:layout_weight="1"
+                        android:orientation="horizontal">
+
+                        <TextView
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="0.32"
+                            android:textColor="@color/white"
+                            android:text="  Line Three  "
+                            android:gravity="center"
+                            android:layout_margin="5dp"
+                            android:padding="@dimen/spacing_small"
+                            android:typeface="serif"
+                            android:layout_gravity="center"
+                            android:background="@drawable/gradienorange">
+
+                        </TextView>
+
+                        <TextView
+                            android:id="@+id/winner_l31"
+                            style="@style/TextAppearance.AppCompat.SearchResult.Subtitle"
+                            android:layout_width="0dp"
+                            android:layout_weight="0.34"
+                            android:layout_height="wrap_content"
+                            android:layout_alignParentTop="true"
+                            android:layout_margin="5dp"
+                            android:text=""
+                            android:gravity="center"
+                            android:textColor="@color/grey_60"
+                            android:typeface="serif"
+                            android:layout_gravity="center"
+                            />
+                        <TextView
+                            android:id="@+id/winner_l3_user"
+                            style="@style/TextAppearance.AppCompat.SearchResult.Subtitle"
+                            android:layout_width="0dp"
+                            android:layout_weight="0.34"
+                            android:layout_height="wrap_content"
+                            android:layout_alignParentTop="true"
+                            android:layout_margin="5dp"
+                            android:text="0"
+                            android:gravity="center"
+                            android:textColor="@color/grey_60"
+                            android:typeface="serif"
+                            android:layout_gravity="center"
+                            />
+
+
+                    </LinearLayout>
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="0dp"
+                        android:layout_weight="1"
+                        android:orientation="horizontal">
+
+                        <TextView
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="0.32"
+                            android:textColor="@color/white"
+                            android:text="  Full Housie  "
+                            android:gravity="center"
+                            android:layout_margin="5dp"
+                            android:padding="@dimen/spacing_small"
+                            android:layout_gravity="center"
+
+                            android:typeface="serif"
+                            android:background="@drawable/gradienttheame">
+
+                        </TextView>
+
+                        <TextView
+                            android:id="@+id/winner_fh1"
+                            style="@style/TextAppearance.AppCompat.SearchResult.Subtitle"
+                            android:layout_width="0dp"
+                            android:layout_weight="0.34"
+                            android:layout_height="wrap_content"
+                            android:layout_alignParentTop="true"
+                            android:layout_margin="5dp"
+                            android:text=""
+                            android:gravity="center"
+                            android:textColor="@color/grey_60"
+                            android:typeface="serif"
+                            android:layout_gravity="center"
+                            />
+                        <TextView
+                            android:id="@+id/winner_fh_user"
+                            style="@style/TextAppearance.AppCompat.SearchResult.Subtitle"
+                            android:layout_width="0dp"
+                            android:layout_weight="0.34"
+                            android:layout_height="wrap_content"
+                            android:layout_alignParentTop="true"
+                            android:layout_margin="5dp"
+                            android:text="0"
+                            android:gravity="center"
+                            android:textColor="@color/grey_60"
+                            android:typeface="serif"
+                            android:layout_gravity="center"
+                            />
+
+
+                    </LinearLayout>
+                </LinearLayout>
+
+            </RelativeLayout>
+
+        </androidx.cardview.widget.CardView>-->
+
+
+        <!--<androidx.cardview.widget.CardView
+            xmlns:android="http://schemas.android.com/apk/res/android"
+            xmlns:card_view="http://schemas.android.com/apk/res-auto"
+            xmlns:tools="http://schemas.android.com/tools"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_margin="2dp"
+            card_view:cardBackgroundColor="#fff"
+            card_view:cardCornerRadius="5dp"
+
+
+            card_view:cardElevation="4dp"
+            card_view:cardUseCompatPadding="true">
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical">
+
+                <LinearLayout
+                    android:id="@+id/hearlayout"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:layout_marginTop="5dp">
+
+                    <TextView
+                        android:id="@+id/textView1"
+                        style="@style/TextAppearance.AppCompat.Medium"
+                        android:layout_width="0dp"
+                        android:layout_weight="1"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentTop="true"
+                        android:padding="5dp"
+                        android:gravity="center"
+                        android:text="Game Type"
+                        android:textColor="@color/grey_60"
+                        android:textStyle="bold" />
+                    <TextView
+                        android:id="@+id/textView2"
+                        style="@style/TextAppearance.AppCompat.Medium"
+                        android:layout_width="0dp"
+                        android:layout_weight="2"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentTop="true"
+                        android:padding="5dp"
+                        android:gravity="center"
+                        android:text="Winners"
+                        android:textColor="@color/grey_60"
+                        android:textStyle="bold" />
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_below="@+id/hearlayout"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:layout_marginBottom="10dp"
+                    android:layout_marginTop="10dp">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="0dp"
+                        android:layout_weight="1"
+                        android:orientation="horizontal">
+
+                        <TextView
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+                            android:layout_margin="5dp"
+                            android:layout_weight="1"
+                            android:background="@drawable/gradientblue"
+                            android:gravity="center"
+                            android:padding="@dimen/spacing_small"
+                            android:text="  First Five  "
+                            android:textColor="@color/white"
+                            android:typeface="serif">
+
+                        </TextView>
+
+                        <TextView
+                            android:id="@+id/winner_f5"
+                            style="@style/TextAppearance.AppCompat.SearchResult.Subtitle"
+                            android:layout_width="0dp"
+                            android:layout_weight="2"
+                            android:layout_height="wrap_content"
+                            android:layout_alignParentTop="true"
+                            android:layout_margin="5dp"
+                            android:text=""
+                            android:gravity="center"
+                            android:layout_gravity="center"
+                            android:typeface="serif"
+                            android:textColor="@color/grey_60"
+
+                            />
+
+
+                    </LinearLayout>
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="0dp"
+                        android:layout_weight="1"
+                        android:orientation="horizontal">
+
+
+                        <TextView
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:textColor="@color/white"
+                            android:text="  Line One  "
+                            android:gravity="center"
+                            android:layout_margin="5dp"
+                            android:padding="@dimen/spacing_small"
+                            android:typeface="serif"
+                            android:layout_gravity="center"
+                            android:background="@drawable/gradientoyellow">
+
+                        </TextView>
+
+                        <TextView
+                            android:id="@+id/winner_l1"
+                            style="@style/TextAppearance.AppCompat.SearchResult.Subtitle"
+                            android:layout_width="0dp"
+                            android:layout_weight="2"
+                            android:layout_height="wrap_content"
+                            android:layout_alignParentTop="true"
+                            android:layout_margin="5dp"
+                            android:text=""
+                            android:gravity="center"
+                            android:textColor="@color/grey_60"
+                            android:typeface="serif"
+                            android:layout_gravity="center"
+                            />
+
+
+                    </LinearLayout>
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="0dp"
+                        android:layout_weight="1"
+                        android:orientation="horizontal">
+
+                        <TextView
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:textColor="@color/white"
+                            android:text="  Line Two  "
+                            android:gravity="center"
+                            android:layout_margin="5dp"
+                            android:padding="@dimen/spacing_small"
+                            android:typeface="serif"
+                            android:layout_gravity="center"
+
+                            android:background="@drawable/gradienskyblue">
+
+                        </TextView>
+
+                        <TextView
+                            android:id="@+id/winner_l2"
+                            style="@style/TextAppearance.AppCompat.SearchResult.Subtitle"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_alignParentTop="true"
+                            android:layout_margin="5dp"
+                            android:layout_weight="2"
+                            android:text=""
+                            android:gravity="center"
+                            android:textColor="@color/grey_60"
+                            android:typeface="serif"
+                            android:layout_gravity="center"
+                            />
+
+
+                    </LinearLayout>
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="0dp"
+                        android:layout_weight="1"
+                        android:orientation="horizontal">
+
+                        <TextView
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:textColor="@color/white"
+                            android:text="  Line Three  "
+                            android:gravity="center"
+                            android:layout_margin="5dp"
+                            android:padding="@dimen/spacing_small"
+                            android:typeface="serif"
+                            android:layout_gravity="center"
+                            android:background="@drawable/gradienorange">
+
+                        </TextView>
+
+                        <TextView
+                            android:id="@+id/winner_l3"
+                            style="@style/TextAppearance.AppCompat.SearchResult.Subtitle"
+                            android:layout_width="0dp"
+                            android:layout_weight="2"
+                            android:layout_height="wrap_content"
+                            android:layout_alignParentTop="true"
+                            android:layout_margin="5dp"
+                            android:text=""
+                            android:gravity="center"
+                            android:textColor="@color/grey_60"
+                            android:typeface="serif"
+                            android:layout_gravity="center"
+                            />
+
+
+                    </LinearLayout>
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="0dp"
+                        android:layout_weight="1"
+                        android:orientation="horizontal">
+
+                        <TextView
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:textColor="@color/white"
+                            android:text="  Full Housie  "
+                            android:gravity="center"
+                            android:layout_margin="5dp"
+                            android:padding="@dimen/spacing_small"
+                            android:layout_gravity="center"
+
+                            android:typeface="serif"
+                            android:background="@drawable/gradienttheame">
+
+                        </TextView>
+
+                        <TextView
+                            android:id="@+id/winner_fh"
+                            style="@style/TextAppearance.AppCompat.SearchResult.Subtitle"
+                            android:layout_width="0dp"
+                            android:layout_weight="2"
+                            android:layout_height="wrap_content"
+                            android:layout_alignParentTop="true"
+                            android:layout_margin="5dp"
+                            android:text=""
+                            android:gravity="center"
+                            android:textColor="@color/grey_60"
+                            android:typeface="serif"
+                            android:layout_gravity="center"
+                            />
+
+
+                    </LinearLayout>
+                </LinearLayout>
+
+            </RelativeLayout>
+
+        </androidx.cardview.widget.CardView>-->
+
+
+
+
+        <!--<androidx.cardview.widget.CardView
+            xmlns:android="http://schemas.android.com/apk/res/android"
+            xmlns:card_view="http://schemas.android.com/apk/res-auto"
+            xmlns:tools="http://schemas.android.com/tools"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_margin="2dp"
+            card_view:cardBackgroundColor="#fff"
+            card_view:cardCornerRadius="5dp"
+
+
+            card_view:cardElevation="4dp"
+            card_view:cardUseCompatPadding="true">
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical"
+                android:layout_marginTop="5dp">
+
+
+                <LinearLayout
+                    android:id="@+id/hearlayout2"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:id="@+id/textView1_2"
+                        style="@style/TextAppearance.AppCompat.Medium"
+                        android:layout_width="0dp"
+                        android:layout_weight="2"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentTop="true"
+                        android:padding="5dp"
+                        android:text="    Game Users"
+                        android:textColor="@color/grey_60"
+                        android:textStyle="bold" />
+                    <TextView
+                        android:id="@+id/textView2_2"
+                        style="@style/TextAppearance.AppCompat.Medium"
+                        android:layout_width="0dp"
+                        android:layout_weight="1"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentTop="true"
+                        android:padding="5dp"
+                        android:gravity="center"
+                        android:text="Tickets Buy"
+                        android:textColor="@color/grey_60"
+                        android:textStyle="bold" />
+
+                </LinearLayout>
+                &lt;!&ndash;<TextView
+                    android:id="@+id/textView"
+                    style="@style/TextAppearance.AppCompat.SearchResult.Title"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentTop="true"
+                    android:padding="5dp"
+                    android:gravity="center"
+                    android:text="Game Users"
+                    android:textColor="@color/grey_60"
+                    android:textStyle="bold" />&ndash;&gt;
+
+                <androidx.recyclerview.widget.RecyclerView
+                    android:id="@+id/game_users_recyclerview"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+
+                    android:layout_below="@+id/hearlayout2"
+                    android:layout_marginTop="10dp"
+                    android:layout_marginBottom="10dp"
+                    />
+
+            </RelativeLayout>
+
+        </androidx.cardview.widget.CardView>-->
+
+        <!--<androidx.cardview.widget.CardView
+
+            android:id="@+id/coinsboardcard"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_margin="2dp"
+            card_view:cardBackgroundColor="#fff"
+            card_view:cardCornerRadius="5dp"
+
+
+            card_view:cardElevation="4dp"
+            card_view:cardUseCompatPadding="true">
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical">
+
+                <TextView
+                    android:id="@+id/textView"
+                    style="@style/TextAppearance.AppCompat.SearchResult.Title"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentTop="true"
+                    android:padding="5dp"
+                    android:gravity="center"
+                    android:text="Coins Board"
+                    android:textColor="@color/grey_60"
+                    android:textStyle="bold" />
+
+                <androidx.recyclerview.widget.RecyclerView
+                    android:id="@+id/previous_numbers_recyclerview"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+
+                    android:layout_below="@+id/textView"
+                    />
+
+            </RelativeLayout>
+
+        </androidx.cardview.widget.CardView>-->
+
+
+
+    </LinearLayout>
+        </LinearLayout>
+    </androidx.core.widget.NestedScrollView>
+
+
+
+</androidx.coordinatorlayout.widget.CoordinatorLayout>

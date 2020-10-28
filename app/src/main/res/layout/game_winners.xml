@@ -1,0 +1,266 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:card_view="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/card_view"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:layout_gravity="center"
+
+    android:background="@drawable/game_ticket_bg"
+
+>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="@dimen/spacing_large">
+
+        <LinearLayout
+            android:id="@+id/hearlayout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_marginTop="5dp">
+
+            <TextView
+                android:id="@+id/textView1"
+                style="@style/TextAppearance.AppCompat.Medium"
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:layout_height="wrap_content"
+                android:layout_alignParentTop="true"
+                android:padding="5dp"
+                android:gravity="center"
+                android:text="Game Type"
+                android:textColor="@color/theme_color1"
+                android:textStyle="bold"
+                android:visibility="visible"/>
+            <TextView
+                android:id="@+id/textView2"
+                style="@style/TextAppearance.AppCompat.Medium"
+                android:layout_width="0dp"
+                android:layout_weight="2"
+                android:layout_height="wrap_content"
+                android:layout_alignParentTop="true"
+                android:padding="5dp"
+                android:gravity="center"
+                android:text="Winners"
+                android:textColor="@color/theme_color1"
+                android:textStyle="bold" />
+
+        </LinearLayout>
+
+        <View
+            android:id="@+id/above_view"
+            android:layout_width="match_parent"
+            android:layout_height="3dp"
+            android:background="@color/theme_color3"
+            android:layout_below="@+id/hearlayout"
+            android:layout_marginTop="5dp"
+            >
+
+        </View>
+        <LinearLayout
+            android:layout_below="@+id/above_view"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:layout_marginBottom="10dp"
+            android:layout_marginTop="5dp">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="1"
+                android:orientation="horizontal">
+
+                <ImageView
+                    android:layout_width="30dp"
+                    android:layout_height="30dp"
+                    android:layout_gravity="center"
+                    android:layout_weight="1"
+                    android:gravity="center"
+                    android:padding="@dimen/spacing_small"
+                    android:text="  First Five  "
+                    android:textColor="@color/white"
+                    android:typeface="serif"
+                    android:src="@drawable/game_type_vew_f5">
+
+                </ImageView>
+
+                <TextView
+                    android:id="@+id/winner_f5"
+                    style="@style/TextAppearance.AppCompat.SearchResult.Subtitle"
+                    android:layout_width="0dp"
+                    android:layout_weight="2"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentTop="true"
+                    android:layout_margin="5dp"
+                    android:text=""
+                    android:gravity="center"
+                    android:layout_gravity="center"
+                    android:typeface="serif"
+                    android:textColor="@color/theme_color3"
+
+                     />
+
+
+            </LinearLayout>
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="1"
+                android:orientation="horizontal">
+
+
+                <ImageView
+                    android:layout_width="30dp"
+                    android:layout_height="30dp"
+                    android:layout_weight="1"
+                    android:textColor="@color/white"
+                    android:text="  Line One  "
+                    android:gravity="center"
+                    android:padding="@dimen/spacing_small"
+                    android:typeface="serif"
+                    android:layout_gravity="center"
+                    android:src="@drawable/game_type_vew_l1">
+
+                </ImageView>
+
+                <TextView
+                    android:id="@+id/winner_l1"
+                    style="@style/TextAppearance.AppCompat.SearchResult.Subtitle"
+                    android:layout_width="0dp"
+                    android:layout_weight="2"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentTop="true"
+                    android:layout_margin="5dp"
+                    android:text=""
+                    android:gravity="center"
+                    android:textColor="@color/theme_color3"
+                    android:typeface="serif"
+                    android:layout_gravity="center"
+                    />
+
+
+            </LinearLayout>
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="1"
+                android:orientation="horizontal">
+
+                <ImageView
+                    android:layout_width="30dp"
+                    android:layout_height="30dp"
+                    android:layout_weight="1"
+                    android:textColor="@color/white"
+                    android:text="  Line Two  "
+                    android:gravity="center"
+                    android:padding="@dimen/spacing_small"
+                    android:typeface="serif"
+                    android:layout_gravity="center"
+
+                    android:src="@drawable/game_type_vew_l2">
+
+                </ImageView>
+
+                <TextView
+                    android:id="@+id/winner_l2"
+                    style="@style/TextAppearance.AppCompat.SearchResult.Subtitle"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentTop="true"
+                    android:layout_margin="5dp"
+                    android:layout_weight="2"
+                    android:text=""
+                    android:gravity="center"
+                    android:textColor="@color/theme_color3"
+                    android:typeface="serif"
+                    android:layout_gravity="center"
+                    />
+
+
+            </LinearLayout>
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="1"
+                android:orientation="horizontal">
+
+                <ImageView
+                    android:layout_width="30dp"
+                    android:layout_height="30dp"
+                    android:layout_weight="1"
+                    android:textColor="@color/white"
+                    android:text="  Line Three  "
+                    android:gravity="center"
+                    android:padding="@dimen/spacing_small"
+                    android:typeface="serif"
+                    android:layout_gravity="center"
+                    android:src="@drawable/game_type_vew_l3">
+
+                </ImageView>
+                <TextView
+                    android:id="@+id/winner_l3"
+                    style="@style/TextAppearance.AppCompat.SearchResult.Subtitle"
+                    android:layout_width="0dp"
+                    android:layout_weight="2"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentTop="true"
+                    android:layout_margin="5dp"
+                    android:text=""
+                    android:gravity="center"
+                    android:textColor="@color/theme_color3"
+                    android:typeface="serif"
+                    android:layout_gravity="center"
+                    />
+
+
+            </LinearLayout>
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="1"
+                android:orientation="horizontal">
+
+                <ImageView
+                    android:layout_width="30dp"
+                    android:layout_height="30dp"
+                    android:layout_weight="1"
+                    android:textColor="@color/white"
+                    android:text="  Full Housie  "
+                    android:gravity="center"
+                    android:padding="@dimen/spacing_small"
+                    android:layout_gravity="center"
+
+                    android:typeface="serif"
+                    android:src="@drawable/game_type_vew_fh">
+
+                </ImageView>
+
+                <TextView
+                    android:id="@+id/winner_fh"
+                    style="@style/TextAppearance.AppCompat.SearchResult.Subtitle"
+                    android:layout_width="0dp"
+                    android:layout_weight="2"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentTop="true"
+                    android:layout_margin="5dp"
+                    android:text=""
+                    android:gravity="center"
+                    android:textColor="@color/theme_color3"
+                    android:typeface="serif"
+                    android:layout_gravity="center"
+                    />
+
+
+            </LinearLayout>
+        </LinearLayout>
+
+    </RelativeLayout>
+
+</RelativeLayout>

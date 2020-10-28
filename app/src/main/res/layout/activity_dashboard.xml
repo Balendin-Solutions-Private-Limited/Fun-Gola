@@ -1,0 +1,279 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.coordinatorlayout.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fitsSystemWindows="true"
+    android:background="@drawable/settingsbg"
+
+    >
+
+    <!--<ImageView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/transperent">
+
+    </ImageView>-->
+    <!--<ScrollView
+        android:layout_width="fill_parent"
+        android:layout_height="match_parent"
+        android:fillViewport="true"
+        android:id="@+id/scrollView">-->
+    <RelativeLayout
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        tools:layout_editor_absoluteY="4dp">
+
+        <TextView
+
+            android:textStyle="bold"
+            android:id="@+id/username"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            android:layout_marginBottom="5dp"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp"
+            android:text="@string/hello_lucky"
+            android:textColor="@color/white"
+            android:textAlignment="center"
+            android:textAppearance="@style/Base.TextAppearance.AppCompat.Medium"
+            android:textSize="30dp" />
+
+        <TextView
+            android:id="@+id/userdes"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/username"
+            android:layout_marginLeft="10dp"
+            android:layout_marginTop="2dp"
+            android:layout_marginRight="10dp"
+            android:layout_marginBottom="10dp"
+            android:text="@string/lets_start_your_today_s_training"
+            android:textAlignment="center"
+            android:textAppearance="@style/Base.TextAppearance.AppCompat.Medium"
+            android:textColor="@color/colorAccent"
+            android:textSize="13dp"
+            android:textStyle="bold" />
+
+        <ImageView
+            android:id="@+id/profile"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignTop="@+id/username"
+
+
+            android:layout_alignParentRight="true"
+            android:tint="@color/white"
+            android:layout_marginRight="10dp"
+            app:srcCompat="@drawable/ic_profile_icon"
+            android:visibility="gone"/>
+
+        <!--<android.support.v7.widget.AppCompatButton
+           
+           
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            
+            android:gravity="center"
+            android:text="Wallet 0          |        Free coins 175"
+             />-->
+        
+        <LinearLayout
+            android:id="@+id/learningprogress"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/userdes"
+            android:layout_marginLeft="20dp"
+            android:layout_marginRight="20dp"
+            android:layout_marginTop="30dp"
+            android:layout_margin="@dimen/spacing_medium"
+
+            android:background="@drawable/btn_rounded_accent"
+            android:orientation="horizontal"
+            >
+            
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="0.35"
+                android:layout_gravity="center"
+                android:layout_marginLeft="8dp"
+
+                android:gravity="center">
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:src="@drawable/ic_image_wallet">
+
+                </ImageView>
+                <TextView
+                    android:id="@+id/wallet_money"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Wallet 0"
+                    android:textAppearance="@style/TextAppearance.AppCompat.Subhead"
+                    android:textColor="@color/colorPrimaryDark"
+                    android:layout_marginLeft="5dp"
+                    >
+
+                </TextView>
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="0.45"
+                android:layout_gravity="center"
+                android:gravity="center">
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:src="@drawable/ic_image_freecoins">
+
+                </ImageView>
+                <TextView
+                    android:id="@+id/free_coins"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Free coins 0"
+                    android:textAppearance="@style/TextAppearance.AppCompat.Subhead"
+                    android:textColor="@color/colorPrimaryDark"
+                    android:layout_marginLeft="5dp"
+                    >
+
+                </TextView>
+            </LinearLayout>
+
+            <LinearLayout
+
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="0.1"
+                android:layout_gravity="center"
+                android:gravity="center">
+                <ImageView
+                    android:id="@+id/info"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:src="@drawable/ic_image_help"
+                    android:padding="8dp"
+                    android:foreground="?selectableItemBackgroundBorderless">
+
+                </ImageView>
+
+            </LinearLayout>
+            <LinearLayout
+                android:id="@+id/rootview"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="0.1"
+                android:layout_gravity="center"
+                android:gravity="center">
+                <ImageView
+                    android:id="@+id/refresh"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:src="@drawable/ic_refresh"
+                    android:padding="8dp"
+                    android:foreground="?selectableItemBackgroundBorderless">
+
+                </ImageView>
+
+            </LinearLayout>
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            android:layout_below="@+id/learningprogress"
+            android:gravity="center"
+
+            >
+
+            <ImageView
+                android:id="@+id/ic_public"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/Public"
+                android:textAllCaps="true"
+                android:padding="5dp"
+                android:textStyle="bold"
+                android:textAlignment="center"
+                android:layout_gravity="center"
+                android:gravity="center"
+                android:layout_marginTop="30dp"
+                android:layout_marginRight="50dp"
+                android:layout_marginLeft="50dp"
+                android:textAppearance="@style/TextAppearance.AppCompat.Title"
+                android:textColor="@color/grey_90"
+                android:src="@drawable/ic_main_public"
+                android:clickable="true"
+                android:scaleType="fitCenter"
+                android:foreground="?attr/selectableItemBackgroundBorderless"/>
+            <ImageView
+                android:id="@+id/ic_free"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/free"
+                android:textAllCaps="true"
+                android:padding="5dp"
+                android:textStyle="bold"
+                android:textAlignment="center"
+                android:layout_gravity="center"
+                android:gravity="center"
+                android:layout_marginTop="20dp"
+                android:layout_marginRight="50dp"
+                android:layout_marginLeft="50dp"
+                android:textAppearance="@style/TextAppearance.AppCompat.Title"
+                android:textColor="@color/grey_90"
+                android:src="@drawable/ic_main_free"
+                android:clickable="true"
+                android:scaleType="fitCenter"
+                android:foreground="?attr/selectableItemBackgroundBorderless"
+                >
+            </ImageView>
+            <ImageView
+                android:id="@+id/ic_private"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/Private"
+                android:textAllCaps="true"
+                android:padding="5dp"
+                android:textStyle="bold"
+                android:textAlignment="center"
+                android:layout_gravity="center"
+                android:gravity="center"
+                android:layout_marginTop="20dp"
+                android:layout_marginRight="50dp"
+                android:layout_marginLeft="50dp"
+                android:textAppearance="@style/TextAppearance.AppCompat.Title"
+                android:textColor="@color/grey_90"
+                android:src="@drawable/ic_main_private"
+                android:clickable="true"
+                android:scaleType="fitCenter"
+                android:foreground="?attr/selectableItemBackgroundBorderless"
+                >
+            </ImageView>
+            <ImageView
+                android:layout_width="match_parent"
+                android:layout_height="?attr/actionBarSize"
+
+                android:layout_marginBottom="?attr/actionBarSize"
+                android:layout_gravity="center"
+
+                >
+            </ImageView>
+
+
+        </LinearLayout>
+
+
+
+    </RelativeLayout>
+
+    <!--</ScrollView>-->
+
+</androidx.coordinatorlayout.widget.CoordinatorLayout>

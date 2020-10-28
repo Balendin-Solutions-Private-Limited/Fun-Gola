@@ -1,0 +1,528 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/ticket_mainlayout"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@drawable/game_ticket_bg"
+
+    android:layout_weight="1"
+>
+<LinearLayout
+
+    android:id="@+id/backgroundtkt"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:padding="@dimen/spacing_large"
+    android:layout_centerInParent="true"
+    android:orientation="vertical">
+
+    <TextView
+        android:id="@+id/tktnumber"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="18sp"
+        android:textStyle="bold"
+        android:textColor="@color/colorPrimary"
+        android:text="@string/app_name"
+        android:paddingLeft="16sp"
+        android:paddingRight="16sp"
+        android:paddingBottom="6sp"
+        android:visibility="gone"/>
+    <RelativeLayout
+        android:gravity="center"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="8dp"
+        android:layout_marginRight="8dp"
+
+        android:layout_below="@+id/tktnumber"
+        >
+        <RelativeLayout
+            android:id="@+id/relativeLayoutmain"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/background_ticket"
+
+            android:layout_centerInParent="true">
+            <TableLayout
+                android:gravity="center"
+                android:id="@+id/tablelayout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:stretchColumns="*"
+                android:shrinkColumns="*">
+                <TableRow android:id="@+id/tableRow1"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="2dp"
+                    android:layout_marginTop="2dp"
+                    android:layout_marginRight="2dp"
+                    >
+                    <TextView android:id="@+id/item11"
+                        android:text="" style="@style/MyTextView"/>
+                    <TextView android:id="@+id/item12" android:text="" style="@style/MyTextView"/>
+                    <TextView android:id="@+id/item13" android:text="" style="@style/MyTextView"/>
+                    <TextView android:id="@+id/item14" android:text="" style="@style/MyTextView"/>
+                    <TextView android:id="@+id/item15" android:text="" style="@style/MyTextView"/>
+                    <TextView android:id="@+id/item16" android:text="" style="@style/MyTextView"/>
+                    <TextView android:id="@+id/item17" android:text="" style="@style/MyTextView"/>
+                    <TextView android:id="@+id/item18" android:text="" style="@style/MyTextView"/>
+                    <TextView android:id="@+id/item19" android:text="" style="@style/MyTextView"/>
+                </TableRow>
+                <TableRow android:id="@+id/tableRow2"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="2dp"
+                    android:layout_marginRight="2dp">
+                    <TextView android:id="@+id/item21" android:text="" style="@style/MyTextView"/>
+                    <TextView android:id="@+id/item22" android:text="" style="@style/MyTextView"/>
+                    <TextView android:id="@+id/item23" android:text="" style="@style/MyTextView"/>
+                    <TextView android:id="@+id/item24" android:text="" style="@style/MyTextView"/>
+                    <TextView android:id="@+id/item25" android:text="" style="@style/MyTextView"/>
+                    <TextView android:id="@+id/item26" android:text="" style="@style/MyTextView"/>
+                    <TextView android:id="@+id/item27" android:text="" style="@style/MyTextView"/>
+                    <TextView android:id="@+id/item28" android:text="" style="@style/MyTextView"/>
+                    <TextView android:id="@+id/item29" android:text="" style="@style/MyTextView"/>
+                </TableRow>
+                <TableRow android:id="@+id/tableRow3"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="2dp"
+                    android:layout_marginRight="2dp"
+                    android:layout_marginBottom="2dp">
+                    <TextView android:id="@+id/item31" android:text="" style="@style/MyTextView"/>
+                    <TextView android:id="@+id/item32" android:text="" style="@style/MyTextView"/>
+                    <TextView android:id="@+id/item33" android:text="" style="@style/MyTextView"/>
+                    <TextView android:id="@+id/item34" android:text="" style="@style/MyTextView"/>
+                    <TextView android:id="@+id/item35" android:text="" style="@style/MyTextView"/>
+                    <TextView android:id="@+id/item36" android:text="" style="@style/MyTextView"/>
+                    <TextView android:id="@+id/item37" android:text="" style="@style/MyTextView"/>
+                    <TextView android:id="@+id/item38" android:text="" style="@style/MyTextView"/>
+                    <TextView android:id="@+id/item39" android:text="" style="@style/MyTextView"/>
+                </TableRow>
+            </TableLayout>
+        </RelativeLayout>
+
+    </RelativeLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_below="@+id/relativeLayoutmain"
+        android:layout_marginTop="5dp"
+
+        >
+        <RelativeLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1">
+            <ImageView
+                android:id="@+id/game_firstfive"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                android:src="@drawable/game_type_f5"
+                android:foreground="?selectableItemBackgroundBorderless">
+
+            </ImageView>
+            <ImageView
+                android:id="@+id/game_firstfive_done"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:elevation="16dp"
+                android:layout_centerInParent="true"
+                android:src="@drawable/ic_done_image"
+
+                android:backgroundTint="@color/transparent"
+                android:visibility="gone"
+
+                />
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1">
+        <ImageView
+            android:id="@+id/game_line1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/game_type_l1"
+            android:layout_centerInParent="true"
+            android:foreground="?selectableItemBackgroundBorderless">
+
+        </ImageView>
+            <ImageView
+                android:id="@+id/game_line1_done"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:elevation="16dp"
+                android:src="@drawable/ic_done_image"
+                android:layout_centerInParent="true"
+                android:backgroundTint="@color/transparent"
+                android:visibility="gone"
+
+                />
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1">
+        <ImageView
+            android:id="@+id/game_line2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/game_type_l2"
+            android:layout_centerInParent="true"
+            android:foreground="?selectableItemBackgroundBorderless">
+
+        </ImageView>
+            <ImageView
+                android:id="@+id/game_line2_done"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:elevation="16dp"
+                android:src="@drawable/ic_done_image"
+                android:layout_centerInParent="true"
+                android:backgroundTint="@color/transparent"
+                android:visibility="gone"
+
+                />
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1">
+        <ImageView
+            android:id="@+id/game_line3"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/game_type_l3"
+            android:layout_centerInParent="true"
+            android:foreground="?selectableItemBackgroundBorderless">
+
+        </ImageView>
+            <ImageView
+                android:id="@+id/game_line3_done"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:elevation="16dp"
+                android:src="@drawable/ic_done_image"
+                android:layout_centerInParent="true"
+
+                android:visibility="gone"
+
+
+                />
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1">
+        <ImageView
+            android:id="@+id/game_fullhousie"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/game_type_fh"
+            android:layout_centerInParent="true"
+            android:foreground="?selectableItemBackgroundBorderless">
+
+        </ImageView>
+            <ImageView
+                android:id="@+id/game_fullhousie_done"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:elevation="16dp"
+                android:src="@drawable/ic_done_image"
+                android:layout_centerInParent="true"
+                android:backgroundTint="@color/transparent"
+                android:visibility="gone"
+
+                />
+
+        </RelativeLayout>
+        <!--<RelativeLayout
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            >
+        <FrameLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="bottom|end"
+            android:layout_centerInParent="true"
+
+            >
+
+            <com.google.android.material.floatingactionbutton.FloatingActionButton
+                android:id="@+id/game_firstfive"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:src="@color/transparent"
+                android:layout_margin="15dp"
+                android:backgroundTint="@color/deep_orange_300"
+                />
+
+            <TextView
+                android:id="@+id/game_firstfive_text"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:elevation="16dp"
+                android:text="F5"
+                android:textAlignment="center"
+                android:textAppearance="@style/TextAppearance.AppCompat.Body1"
+                android:textColor="@color/grey_90"
+                android:textStyle="bold" />
+            <ImageView
+                android:id="@+id/game_firstfive_done"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:elevation="16dp"
+
+                android:src="@drawable/ic_done_image"
+               
+                android:backgroundTint="@color/transparent"
+                android:visibility="gone"
+
+               />
+        </FrameLayout>
+        </RelativeLayout>
+        <RelativeLayout
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1">
+        <FrameLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="bottom|right"
+            android:layout_centerInParent="true"
+            >
+
+            <com.google.android.material.floatingactionbutton.FloatingActionButton
+                android:id="@+id/game_line1"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:src="@android:color/transparent"
+                android:layout_margin="15dp"
+                android:backgroundTint="@color/purple_300"/>
+
+            <TextView
+                android:id="@+id/game_line1_text"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:text="L1"
+                android:elevation="16dp"
+                android:textStyle="bold"
+                android:textAlignment="center"
+                android:textAppearance="@style/TextAppearance.AppCompat.Body1"
+                android:textColor="@color/grey_90" />
+            <ImageView
+                android:id="@+id/game_line1_done"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:elevation="16dp"
+                android:src="@drawable/ic_done_image"
+               
+                android:backgroundTint="@color/transparent"
+                android:visibility="gone"
+
+                />
+        </FrameLayout>
+        </RelativeLayout>
+        <RelativeLayout
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1">
+        <FrameLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="bottom|right"
+            android:layout_centerInParent="true"
+            >
+
+            <com.google.android.material.floatingactionbutton.FloatingActionButton
+                android:id="@+id/game_line2"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_margin="15dp"
+                android:backgroundTint="@color/yellow_300"
+                android:src="@android:color/transparent" />
+
+            <TextView
+                android:id="@+id/game_line2_text"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:text="L2"
+                android:elevation="16dp"
+                android:textStyle="bold"
+                android:textAlignment="center"
+                android:textAppearance="@style/TextAppearance.AppCompat.Body1"
+                android:textColor="@color/grey_90" />
+            <ImageView
+                android:id="@+id/game_line2_done"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:elevation="16dp"
+
+                android:src="@drawable/ic_done_image"
+               
+                android:backgroundTint="@color/transparent"
+                android:visibility="gone"
+
+                />
+        </FrameLayout>
+        </RelativeLayout>
+        <RelativeLayout
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1">
+        <FrameLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="bottom|right"
+            android:layout_centerInParent="true"
+            >
+
+            <com.google.android.material.floatingactionbutton.FloatingActionButton
+                android:id="@+id/game_line3"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_margin="15dp"
+                android:backgroundTint="@color/green_300"
+                android:src="@android:color/transparent" />
+
+            <TextView
+                android:id="@+id/game_line3_text"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:text="L3"
+                android:elevation="16dp"
+                android:textStyle="bold"
+                android:textAlignment="center"
+                android:textAppearance="@style/TextAppearance.AppCompat.Body1"
+                android:textColor="@color/grey_90" />
+            <ImageView
+                android:id="@+id/game_line3_done"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:elevation="16dp"
+
+                android:src="@drawable/ic_done_image"
+               
+                android:backgroundTint="@color/transparent"
+                android:visibility="gone"
+
+                />
+        </FrameLayout>
+        </RelativeLayout>
+        <RelativeLayout
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1">
+        <FrameLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="bottom|right"
+            android:layout_centerInParent="true"
+            >
+
+            <com.google.android.material.floatingactionbutton.FloatingActionButton
+                android:id="@+id/game_fullhousie"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:src="@android:color/transparent"
+                android:layout_margin="15dp"
+                android:backgroundTint="@color/cyan_300"
+                />
+
+            <TextView
+                android:id="@+id/game_fullhousie_text"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:text="FH"
+                android:elevation="16dp"
+                android:textStyle="bold"
+                android:textAlignment="center"
+                android:textAppearance="@style/TextAppearance.AppCompat.Body1"
+                android:textColor="@color/grey_90" />
+            <ImageView
+                android:id="@+id/game_fullhousie_done"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:elevation="16dp"
+
+                android:src="@drawable/ic_done_image"
+               
+                android:backgroundTint="@color/transparent"
+                android:visibility="gone"
+
+                />
+        </FrameLayout>
+        </RelativeLayout>-->
+
+    </LinearLayout>
+    <!--<LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_below="@+id/relativeLayoutmain"
+        android:layout_marginTop="5dp">
+        <Button
+            android:id="@+id/game_firstfive"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="First 5"
+            android:layout_weight="1"/>
+
+        <Button
+            android:id="@+id/game_line1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Line 1"
+            android:layout_weight="1"/>
+
+        <Button
+            android:id="@+id/game_line2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Line 2"
+            android:layout_weight="1"/>
+
+        <Button
+            android:id="@+id/game_line3"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Line3"
+            android:layout_weight="1"/>
+
+        <Button
+            android:id="@+id/game_fullhousie"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Full House"
+            android:layout_weight="1"/>
+
+    </LinearLayout>-->
+</LinearLayout>
+</RelativeLayout>

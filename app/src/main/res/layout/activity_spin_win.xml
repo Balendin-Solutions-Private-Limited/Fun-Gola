@@ -1,0 +1,186 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="@drawable/settingsbg">
+    <androidx.core.widget.NestedScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:scrollbars="none"
+        android:scrollingCache="true"
+
+        >
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="?actionBarSize"
+                android:id="@+id/heading"
+                >
+                <ImageView
+                    android:layout_width="match_parent"
+                    android:layout_height="?actionBarSize"
+                    android:background="@drawable/settingsbg_strip">
+
+                </ImageView>
+
+                <TextView
+
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="SPIN WIN"
+                    android:layout_gravity="top"
+                    android:textStyle="bold"
+                    android:textAppearance="@style/TextAppearance.AppCompat.Subhead"
+                    android:textColor="@color/white"
+                    android:shadowDy="2"
+                    android:shadowDx="2"
+                    android:shadowRadius="1"
+                    android:layout_marginTop="5dp"
+                    android:layout_centerInParent="true"
+                    android:layout_alignParentTop="true"
+                    android:shadowColor="@color/text_themecolor1"
+                    android:textAllCaps="true"
+
+                    >
+
+                </TextView>
+
+
+
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:id="@+id/spinlayout"
+                android:layout_width="match_parent"
+                android:layout_height="400dp"
+                android:layout_weight="2"
+                android:layout_below="@+id/heading"
+                android:layout_marginTop="5dp">
+                <com.thambola.fungola.widgets.WheelView
+                    android:id="@+id/wheelView"
+                    android:layout_width="match_parent"
+                    android:layout_height="400dp"
+                    android:layout_marginTop="10dp"
+                    />
+
+            </RelativeLayout>
+
+            <com.startapp.sdk.ads.banner.Banner
+                android:layout_below="@+id/heading"
+                android:id="@+id/banner_container"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:layout_centerHorizontal="true"
+                android:layout_centerInParent="true"
+                android:layout_gravity="center"
+                android:layout_marginBottom="3dp"
+                android:layout_marginTop="3dp"
+                android:visibility="visible" />
+
+
+            <RelativeLayout
+                android:id="@+id/spinbutton_layout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:layout_below="@+id/spinlayout">
+
+                <Button
+                    android:id="@+id/autoSpinButton"
+                    android:layout_width="match_parent"
+                    android:layout_height="?actionBarSize"
+                    android:layout_alignParentTop="true"
+                    android:text="SPIN"
+
+                    android:textAppearance="@style/TextAppearance.AppCompat.Headline"
+                    android:textColor="@color/white"
+                    android:textStyle="bold"
+                    android:layout_marginTop="20dp"
+                    android:layout_marginRight="50dp"
+                    android:layout_marginLeft="50dp"
+                    android:layout_centerInParent="true"
+                    android:background="@drawable/wallet_image2"
+                    android:foreground="?selectableItemBackgroundBorderless"
+
+
+                    />
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:layout_marginTop="5dp"
+                android:layout_below="@+id/spinbutton_layout"
+                android:id="@+id/nativelayout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+
+
+                android:layout_gravity="center"
+                android:gravity="center">
+                <com.startapp.sdk.ads.banner.Mrec
+                    android:id="@+id/startAppMrec"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerHorizontal="true" />
+
+
+
+            </RelativeLayout>
+            <!--<LinearLayout
+                android:layout_below="@+id/heading"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical">
+
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="0dp"
+                    android:layout_weight="2">
+                    <com.thambola.fungola.widgets.WheelView
+                        android:id="@+id/wheelView"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_marginTop="10dp"
+                        />
+
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="0dp"
+                    android:layout_weight="1">
+
+                    <Button
+                        android:id="@+id/autoSpinButton"
+                        android:layout_width="match_parent"
+                        android:layout_height="?actionBarSize"
+                        android:layout_alignParentTop="true"
+                        android:text="SPIN"
+
+                        android:textAppearance="@style/TextAppearance.AppCompat.Headline"
+                        android:textColor="@color/white"
+                        android:textStyle="bold"
+                        android:layout_marginTop="20dp"
+                        android:layout_marginRight="50dp"
+                        android:layout_marginLeft="50dp"
+                        android:layout_centerInParent="true"
+                        android:background="@drawable/wallet_image2"
+                        android:foreground="?selectableItemBackgroundBorderless"
+
+
+                        />
+                </RelativeLayout>
+
+            </LinearLayout>-->
+
+
+        </RelativeLayout>
+
+
+    </androidx.core.widget.NestedScrollView>
+
+</RelativeLayout>

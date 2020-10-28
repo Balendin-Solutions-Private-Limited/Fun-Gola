@@ -1,0 +1,88 @@
+apply plugin: 'com.android.application'
+
+android {
+    signingConfigs {
+        config {
+            storeFile file('D:\\Workspace\\11ProjectClients\\FunGola\\Stuff\\fungola_key.jks')
+            storePassword 'FunGola@799'
+            keyPassword 'FunGola@799'
+            keyAlias = 'fungola_key'
+        }
+    }
+    compileSdkVersion 29
+    buildToolsVersion "29.0.2"
+    defaultConfig {
+        applicationId "com.thambola.fungola"
+        minSdkVersion 16
+        targetSdkVersion 29
+        versionCode 1
+        versionName "1.0"
+        testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
+    }
+    buildTypes {
+        release {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
+            signingConfig signingConfigs.config
+        }
+    }
+
+    lintOptions {
+        checkReleaseBuilds false
+        // Or, if you prefer, you can continue to check for errors in release builds,
+        // but continue the build even when errors are found:
+        abortOnError false
+    }
+}
+
+dependencies {
+    implementation fileTree(dir: 'libs', include: ['*.jar'])
+    implementation 'androidx.appcompat:appcompat:1.1.0'
+    implementation 'androidx.constraintlayout:constraintlayout:1.1.3'
+    testImplementation 'junit:junit:4.12'
+    androidTestImplementation 'androidx.test:runner:1.2.0'
+    androidTestImplementation 'androidx.test.espresso:espresso-core:3.2.0'
+
+    implementation 'com.android.support:gridlayout-v7:29.0.0'
+    // compile 'com.android.support:appcompat-v7:+'
+
+    implementation 'com.android.support:design:29.0.0'
+    implementation "com.android.support:recyclerview-v7:29.0.0"
+    implementation 'com.android.support:cardview-v7:29.0.0'
+    implementation 'com.balysv:material-ripple:1.0.2'
+
+    implementation 'com.mikhaellopez:circularimageview:3.2.0'
+
+    implementation 'io.github.luizgrp.sectionedrecyclerviewadapter:sectionedrecyclerviewadapter:1.0.4'
+
+
+    implementation 'com.github.anupamchugh:SmoothCountDownProgressBar:1.0'
+    implementation 'com.pkmmte.view:circularimageview:1.1'
+
+    implementation 'com.google.code.gson:gson:2.6.2'
+    implementation 'com.squareup.retrofit2:retrofit:2.3.0'
+    implementation 'com.squareup.retrofit2:converter-gson:2.2.0'
+
+    implementation 'com.squareup.retrofit2:converter-scalars:2.3.0'
+
+    implementation 'com.google.firebase:firebase-messaging:20.1.3'
+
+    implementation 'com.github.bumptech.glide:glide:4.0.0'
+
+    //gamelaim type animation
+    implementation 'com.plattysoft.leonids:LeonidsLib:1.3.2'
+
+    implementation 'org.jsoup:jsoup:1.8.3'
+
+    // boutton touch animation
+    implementation 'com.github.skydoves:elasticviews:1.1.2'
+
+    implementation('com.paytm:pgplussdk:1.2.3') {
+        transitive = true;
+    }
+
+   /* implementation 'androidx.annotation:annotation:1.0.0'
+    implementation 'com.facebook.android:audience-network-sdk:5.+'*/
+    implementation 'com.startapp:inapp-sdk:4.6.+'
+}
+apply plugin: 'com.google.gms.google-services'

@@ -1,0 +1,417 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:card_view="http://schemas.android.com/apk/res-auto"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:id="@+id/relativeLayout_main"
+    android:orientation="vertical">
+
+
+
+    <RelativeLayout
+        android:id="@+id/relativeLayout"
+        android:layout_width="200dp"
+        android:layout_height="wrap_content"
+        android:layout_margin="1dp"
+        android:layout_weight="1"
+
+        android:background="@drawable/game_background">
+
+        <!--<androidx.cardview.widget.CardView
+
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/spacing_xmedium"
+            android:layout_weight="1"
+            app:cardBackgroundColor="@color/white"
+            app:cardCornerRadius="10dp"
+            app:cardElevation="5dp">-->
+
+            <FrameLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <com.balysv.materialripple.MaterialRippleLayout
+                    android:id="@+id/ripple"
+                    style="@style/RippleStyleBlack"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    >
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:clickable="true"
+                        android:orientation="vertical"
+                        android:padding="@dimen/spacing_medium"
+                        >
+
+                        <RelativeLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="horizontal">
+                            <TextView
+                                android:id="@+id/gamestatingdate"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="Today"
+                                android:textAlignment="center"
+                                android:layout_centerInParent="true"
+                                android:textAppearance="@style/TextAppearance.AppCompat.Headline"
+                                android:textColor="@color/white"
+                                android:shadowColor="@color/text_themecolor1"
+                                android:shadowRadius="2"
+                                android:shadowDx="5"
+                                android:shadowDy="5"/>
+
+                            <ImageView
+
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_alignParentTop="true"
+                               android:layout_centerInParent="true"
+                                android:layout_marginLeft="1dp"
+                                android:layout_marginTop="0dp"
+                                android:layout_toRightOf="@+id/gamestatingdate"
+                                android:layout_weight="1"
+
+
+                                android:src="@drawable/ic_image_help"
+                                android:visibility="gone" />
+                            <TextView
+
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="Game Running"
+
+                                android:textStyle="bold"
+                                android:layout_alignParentRight="true"
+                                android:textAppearance="@style/TextAppearance.AppCompat.Caption"
+                                android:textColor="@color/red_500"
+                                android:visibility="gone"/>
+                        </RelativeLayout>
+
+                        <View
+                            android:layout_width="match_parent"
+                            android:layout_height="5dp"
+                            android:background="@color/theme_color2">
+
+                        </View>
+
+                        <RelativeLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="horizontal">
+                            <TextView
+                                android:id="@+id/gamestatingtime"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="10.30 AM"
+                                android:textAlignment="center"
+                                android:layout_gravity="center"
+                                android:layout_centerInParent="true"
+                                android:textAppearance="@style/TextAppearance.AppCompat.Headline"
+                                android:textColor="@color/white"
+                                android:shadowColor="@color/text_themecolor1"
+                                android:shadowRadius="2"
+                                android:shadowDx="5"
+                                android:shadowDy="5"/>
+                           <!-- <ImageView
+                                android:id="@+id/calulatemoney"
+                                android:layout_width="wrap_content"
+                                android:layout_weight="1"
+                                android:layout_height="20dp"
+                                android:padding="3dp"
+                                android:layout_centerInParent="true"
+                                android:src="@drawable/ic_image_help"
+                                android:layout_toRightOf="@+id/gamestatingtime"
+                                android:layout_marginLeft="10dp"
+                                android:visibility="gone"
+                                />
+                            <TextView
+                                android:id="@+id/gamestatus"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="Game Running"
+
+                                android:layout_alignParentRight="true"
+                                android:textAppearance="@style/TextAppearance.AppCompat.Caption"
+                                android:textColor="@color/colorPrimary"
+                                android:visibility="invisible"/>-->
+                        </RelativeLayout>
+
+                        <View
+                            android:layout_width="match_parent"
+                            android:layout_height="5dp"
+                            android:background="@color/theme_color2">
+
+                        </View>
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="vertical"
+                            android:layout_marginTop="@dimen/spacing_medium">
+
+                            <RelativeLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content">
+
+                                <ImageView
+                                    android:id="@+id/calulatemoney"
+                                    android:layout_width="20dp"
+                                    android:layout_height="20dp"
+
+                                    android:layout_centerInParent="true"
+                                    android:layout_alignParentRight="true"
+                                    android:layout_marginRight="10dp"
+                                    android:layout_marginLeft="10dp"
+                                    android:src="@drawable/ic_info"
+                                    android:visibility="visible" />
+                                <TextView
+                                    android:id="@+id/gamestatus"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:text="Game Running"
+                                    android:layout_toLeftOf="@+id/calulatemoney"
+                                    android:textStyle="bold"
+                                    android:layout_marginRight="50dp"
+                                    android:layout_marginLeft="10dp"
+                                    android:layout_centerInParent="true"
+                                    android:layout_alignParentRight="true"
+                                    android:textAppearance="@style/TextAppearance.AppCompat.Caption"
+                                    android:textColor="@color/white"
+                                    android:visibility="visible"/>
+                            </RelativeLayout>
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_weight="1"
+                                android:layout_height="wrap_content"
+                                android:orientation="vertical"
+                                android:layout_marginTop="5dp"
+                                android:layout_gravity="center"
+                                android:gravity="center">
+
+                                <LinearLayout
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:orientation="horizontal"
+                                    android:layout_marginBottom="10dp"
+                                    >
+                                    <LinearLayout
+                                        android:layout_width="0dp"
+                                        android:layout_height="wrap_content"
+                                        android:layout_weight="1"
+                                        android:orientation="horizontal"
+                                        android:layout_marginLeft="10dp"
+                                        >
+
+                                        <!--<ImageView
+                                            android:id="@+id/imageView_particpents"
+                                            android:layout_width="20dp"
+                                            android:layout_weight="1"
+                                            android:layout_height="wrap_content"
+                                            android:src="@drawable/game_particpents"
+                                            />-->
+                                        <TextView
+                                            android:id="@+id/textView_particpents"
+                                            android:layout_width="match_parent"
+                                            android:layout_height="wrap_content"
+                                            android:layout_gravity="center"
+                                            android:gravity="center"
+                                            android:text="12"
+                                            android:drawableLeft="@drawable/game_particpents"
+                                            android:textAlignment="center"
+                                            android:textAppearance="@style/TextAppearance.AppCompat.Medium"
+                                            android:textColor="@color/white" />
+                                    </LinearLayout>
+                                    <LinearLayout
+                                        android:layout_width="0dp"
+                                        android:layout_height="match_parent"
+                                        android:layout_weight="1"
+                                        android:orientation="horizontal"
+
+                                        >
+
+                                        <!--<ImageView
+                                            android:id="@+id/imageView_ticketcost"
+                                            android:layout_width="40dp"
+
+                                            android:layout_height="40dp"
+                                            android:layout_gravity="center"
+                                            android:src="@drawable/game_price"
+                                            />-->
+                                        <TextView
+                                            android:id="@+id/textView_ticketcost"
+                                            android:layout_width="match_parent"
+
+                                            android:layout_height="wrap_content"
+                                            android:layout_gravity="center"
+                                            android:gravity="center"
+                                            android:text="0"
+                                            android:singleLine="true"
+                                            android:drawableLeft="@drawable/game_price"
+                                            android:textAlignment="center"
+                                            android:textAppearance="@style/TextAppearance.AppCompat.Medium"
+                                            android:textColor="@color/white" />
+                                    </LinearLayout>
+                                </LinearLayout>
+
+                                <LinearLayout
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:orientation="horizontal"
+                                    android:layout_marginBottom="5dp"
+                                    >
+                                    <LinearLayout
+                                        android:layout_width="0dp"
+                                        android:layout_height="wrap_content"
+                                        android:layout_weight="1"
+                                        android:orientation="horizontal"
+                                        android:layout_marginLeft="10dp"
+                                        >
+
+                                       <!-- <ImageView
+                                            android:id="@+id/imageView_ticketsbuy"
+                                            android:layout_width="20dp"
+                                            android:layout_weight="1"
+                                            android:layout_height="wrap_content"
+                                            android:src="@drawable/game_tickets"
+
+                                            />-->
+                                        <TextView
+                                            android:id="@+id/textView_ticketsbuy"
+                                            android:layout_width="match_parent"
+                                            android:layout_height="wrap_content"
+                                            android:layout_gravity="center"
+                                            android:gravity="center"
+                                            android:text="2"
+                                            android:drawableLeft="@drawable/game_tickets_buy"
+                                            android:textAlignment="center"
+                                            android:textAppearance="@style/TextAppearance.AppCompat.Medium"
+                                            android:textColor="@color/white" />
+                                    </LinearLayout>
+                                    <LinearLayout
+                                        android:layout_width="0dp"
+                                        android:layout_height="wrap_content"
+                                        android:layout_weight="1"
+                                        android:orientation="horizontal"
+                                        >
+
+                                        <!--<ImageView
+                                            android:id="@+id/imageView_totalcost"
+                                            android:layout_width="20dp"
+                                            android:layout_weight="1"
+                                            android:layout_height="wrap_content"
+                                            android:src="@drawable/game_winamount"
+                                            />-->
+
+                                        <TextView
+                                            android:id="@+id/textView_totalcost"
+                                            android:layout_width="match_parent"
+                                            android:layout_height="wrap_content"
+                                            android:layout_gravity="center"
+                                            android:gravity="center"
+                                            android:text="12"
+                                            android:drawableLeft="@drawable/game_winchanceamount"
+                                            android:textAlignment="center"
+                                            android:textAppearance="@style/TextAppearance.AppCompat.Medium"
+                                            android:textColor="@color/white" />
+
+
+                                    </LinearLayout>
+                                </LinearLayout>
+
+                            </LinearLayout>
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_weight="1"
+                                android:layout_height="wrap_content"
+                                android:orientation="horizontal"
+                                android:layout_marginTop="5dp"
+                                android:layout_marginLeft="5dp"
+                                android:layout_marginRight="5dp"
+
+                                >
+
+                                <LinearLayout
+                                    android:layout_width="0dp"
+                                    android:layout_height="match_parent"
+                                    android:layout_weight="1"
+                                    android:orientation="horizontal"
+
+                                    >
+
+                                    <TextView
+                                        android:id="@+id/textView_startgame"
+                                        android:layout_width="0dp"
+                                        android:layout_weight="1"
+                                        android:layout_height="wrap_content"
+
+
+                                        android:textStyle="bold"
+                                        android:textAlignment="center"
+                                        android:textAppearance="@style/TextAppearance.AppCompat.Body2"
+                                        android:textColor="@color/grey_90"
+                                        android:background="@drawable/game_play"
+                                        android:clickable="true"
+                                        android:foreground="?attr/selectableItemBackgroundBorderless"/>
+                                </LinearLayout>
+                                <LinearLayout
+                                    android:layout_width="0dp"
+                                    android:layout_height="match_parent"
+                                    android:layout_weight="1"
+                                    android:orientation="horizontal"
+                                    >
+
+                                    <TextView
+                                        android:id="@+id/textView_buytickets"
+                                        android:layout_width="0dp"
+                                        android:layout_weight="1"
+                                        android:layout_height="wrap_content"
+
+                                        android:padding="10dp"
+                                        android:textStyle="bold"
+                                        android:textAlignment="center"
+                                        android:textAppearance="@style/TextAppearance.AppCompat.Body2"
+                                        android:textColor="@color/grey_90"
+                                        android:background="@drawable/game_buy"
+                                        android:clickable="true"
+                                        android:foreground="?attr/selectableItemBackgroundBorderless"/>
+                                </LinearLayout>
+
+                            </LinearLayout>
+                        </LinearLayout>
+
+                        <!--<ImageView
+                            android:id="@+id/imageView"
+                            android:layout_width="100dp"
+                            android:layout_height="100dp"
+                            />-->
+
+
+
+                    </LinearLayout>
+
+                </com.balysv.materialripple.MaterialRippleLayout>
+                <ImageView
+                    android:id="@+id/ic_buy_ticket"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="top|start"
+                    android:layout_marginEnd="8dp"
+                    android:layout_marginRight="8dp"
+                    android:layout_marginLeft="8dp"
+                    android:layout_marginTop="-1dp"
+                    android:src="@drawable/game_buy_tag"
+                    android:visibility="visible"/>
+            </FrameLayout>
+
+
+       <!-- </androidx.cardview.widget.CardView>-->
+
+    </RelativeLayout>
+
+
+</RelativeLayout>

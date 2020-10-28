@@ -1,0 +1,445 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:card_view="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/settingsbg">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="?actionBarSize"
+        android:id="@+id/heading"
+        >
+        <ImageView
+            android:layout_width="match_parent"
+            android:layout_height="?actionBarSize"
+            android:background="@drawable/settingsbg_strip">
+
+        </ImageView>
+
+        <TextView
+
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Registration"
+            android:layout_gravity="top"
+            android:textStyle="bold"
+            android:textAppearance="@style/TextAppearance.AppCompat.Subhead"
+            android:textColor="@color/white"
+            android:shadowDy="2"
+            android:shadowDx="2"
+            android:shadowRadius="1"
+            android:layout_centerInParent="true"
+            android:layout_alignParentTop="true"
+            android:shadowColor="@color/text_themecolor1"
+            android:textAllCaps="true"
+
+            >
+
+        </TextView>
+
+
+
+    </RelativeLayout>
+
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/heading">
+
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="60dp"
+                    android:background="@color/colorPrimary"
+                    android:visibility="gone">
+
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerVertical="true"
+                        android:layout_marginLeft="16dp"
+                        android:textAppearance="@style/Base.TextAppearance.AppCompat.Title"
+
+                        android:text="Registration"
+                        android:textColor="@android:color/white"
+                        android:textSize="35sp"
+                        android:textStyle="bold"/>
+
+                    <FrameLayout
+                        android:id="@+id/clear"
+                        android:layout_width="56dp"
+                        android:layout_height="56dp"
+                        android:layout_alignParentRight="true"
+                        android:layout_centerVertical="true">
+
+                        <ImageView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+                            android:src="@drawable/ic_clear" />
+
+
+                    </FrameLayout>
+
+
+                </RelativeLayout>
+
+
+                <RelativeLayout
+                    android:id="@+id/email_password_layout"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_centerHorizontal="true"
+                        android:orientation="vertical">
+
+                        <com.google.android.material.textfield.TextInputLayout
+                            android:id="@+id/namelayout"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="16dp"
+                            android:layout_marginRight="16dp"
+                            android:layout_marginTop="10dp"
+                            android:textColor="@color/white"
+                            android:textColorHint="@color/white"
+                            android:theme="@style/TextLabel"
+                            >
+
+                            <com.google.android.material.textfield.TextInputEditText
+                                android:id="@+id/name"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:ems="10"
+                                android:hint="Username"
+                                android:singleLine="true"
+                                android:textAppearance="@style/Base.TextAppearance.AppCompat.Subhead"
+                                android:textColor="@color/white"
+                                android:textColorHint="@color/white"
+                                android:backgroundTint="@color/white"
+
+                                />
+                        </com.google.android.material.textfield.TextInputLayout>
+
+                        <com.google.android.material.textfield.TextInputLayout
+                            android:id="@+id/mobilelayout"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="16dp"
+                            android:layout_marginRight="16dp"
+                            android:layout_marginTop="10dp"
+                            android:textColor="@color/white"
+                            android:textColorHint="@color/white"
+                            android:theme="@style/TextLabel">
+
+                            <EditText
+                                android:id="@+id/mobile"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:ems="10"
+                                android:inputType="phone"
+                                android:hint="Mobile"
+                                android:singleLine="true"
+                                android:textAppearance="@style/Base.TextAppearance.AppCompat.Subhead"
+                                android:textColor="@color/white"
+                                android:backgroundTint="@color/white"/>
+                        </com.google.android.material.textfield.TextInputLayout>
+
+                        <com.google.android.material.textfield.TextInputLayout
+                            android:id="@+id/emaillayout"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="16dp"
+                            android:layout_marginRight="16dp"
+                            android:layout_marginTop="10dp"
+                            android:textColor="@color/white"
+                            android:textColorHint="@color/white"
+                            android:theme="@style/TextLabel">
+
+                            <EditText
+                                android:id="@+id/email"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:ems="10"
+                                android:hint="Email"
+                                android:singleLine="true"
+                                android:textAppearance="@style/Base.TextAppearance.AppCompat.Subhead"
+                                android:textColor="@color/white"
+                                android:backgroundTint="@color/white"/>
+                        </com.google.android.material.textfield.TextInputLayout>
+
+                        <com.google.android.material.textfield.TextInputLayout
+                            android:id="@+id/passwordlayout"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_below="@+id/emaillayout"
+                            android:layout_marginLeft="16dp"
+                            android:layout_marginRight="16dp"
+                            android:layout_marginTop="10dp"
+                            android:textColor="@color/white"
+                            android:textColorHint="@color/white"
+                            android:theme="@style/TextLabel">
+
+                            <EditText
+                                android:id="@+id/password"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:ems="10"
+                                android:hint="Password"
+                                android:inputType="textPassword"
+                                android:singleLine="true"
+                                android:textAppearance="@style/Base.TextAppearance.AppCompat.Subhead"
+                                android:textColor="@color/white"
+                                android:backgroundTint="@color/white"/>
+                        </com.google.android.material.textfield.TextInputLayout>
+
+                        <com.google.android.material.textfield.TextInputLayout
+                            android:id="@+id/confirmpasswordlayout"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_below="@+id/emaillayout"
+                            android:layout_marginLeft="16dp"
+                            android:layout_marginRight="16dp"
+                            android:layout_marginTop="10dp"
+                            android:textColor="@color/white"
+                            android:textColorHint="@color/white"
+                            android:theme="@style/TextLabel">
+
+                            <EditText
+                                android:id="@+id/confirm_password"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:ems="10"
+                                android:hint="Confirm Password"
+                                android:inputType="textPassword"
+                                android:singleLine="true"
+                                android:textAppearance="@style/Base.TextAppearance.AppCompat.Subhead"
+                                android:textColor="@color/white"
+                                android:backgroundTint="@color/white"/>
+                        </com.google.android.material.textfield.TextInputLayout>
+
+                        <LinearLayout
+
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="16dp"
+                            android:layout_marginRight="16dp"
+                            android:layout_marginTop="10dp"
+                            android:orientation="horizontal"
+                            android:visibility="gone">
+                            <com.google.android.material.textfield.TextInputLayout
+                                android:id="@+id/genderlayout"
+                                android:layout_width="0dp"
+                                android:layout_weight="1"
+                                android:layout_height="wrap_content"
+                                android:layout_below="@+id/emaillayout"
+                                android:textColor="@color/white"
+                                android:textColorHint="@color/white"
+                               >
+
+                                <EditText
+                                    android:id="@+id/gender"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:ems="10"
+                                    android:hint="Gender"
+                                    android:singleLine="true"
+                                    android:textAppearance="@style/Base.TextAppearance.AppCompat.Subhead"
+                                    android:textColor="@color/white"
+                                    android:backgroundTint="@color/white"/>
+                            </com.google.android.material.textfield.TextInputLayout>
+                            <com.google.android.material.textfield.TextInputLayout
+                                android:id="@+id/doblayout"
+                                android:layout_width="0dp"
+                                android:layout_weight="1"
+                                android:layout_height="wrap_content"
+                                android:layout_below="@+id/emaillayout"
+                               >
+
+                                <EditText
+                                    android:id="@+id/dob"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="41dp"
+                                    android:ems="10"
+                                    android:hint="DateofBirth"
+                                    android:singleLine="true"
+                                    android:textAppearance="@style/Base.TextAppearance.AppCompat.Subhead"
+                                    android:textColor="@color/grey_60" />
+                            </com.google.android.material.textfield.TextInputLayout>
+
+
+                        </LinearLayout>
+
+                        <com.google.android.material.textfield.TextInputLayout
+                            android:id="@+id/referalcodelayout"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_below="@+id/emaillayout"
+                            android:layout_marginLeft="16dp"
+                            android:layout_marginRight="16dp"
+                            android:layout_marginTop="10dp"
+                            android:textColor="@color/white"
+                            android:textColorHint="@color/white"
+                            android:theme="@style/TextLabel">
+
+                            <EditText
+                                android:id="@+id/referalcode"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:hint="Referal code (Optional)"
+                                android:singleLine="true"
+                                android:textAppearance="@style/Base.TextAppearance.AppCompat.Subhead"
+                                android:textColor="@color/white"
+                                android:backgroundTint="@color/white"/>
+                        </com.google.android.material.textfield.TextInputLayout>
+
+
+                    </LinearLayout>
+
+
+                </RelativeLayout>
+
+                <!-- <RelativeLayout
+                     android:id="@+id/address_layout"
+                     android:layout_width="match_parent"
+                     android:layout_height="wrap_content">
+
+                     <LinearLayout
+                         android:layout_width="match_parent"
+                         android:layout_height="wrap_content"
+                         android:layout_centerHorizontal="true"
+                         android:layout_marginTop="20dp"
+                         android:orientation="vertical">
+
+                         <com.google.android.material.textfield.TextInputLayout
+                             android:id="@+id/addresslayout"
+                             android:layout_width="match_parent"
+                             android:layout_height="wrap_content"
+                             android:layout_marginLeft="16dp"
+                             android:layout_marginRight="16dp"
+                             android:layout_marginTop="10dp">
+
+                             <EditText
+                                 android:id="@+id/address"
+                                 android:layout_width="match_parent"
+                                 android:layout_height="wrap_content"
+                                 android:ems="10"
+                                 android:hint="Address"
+                                 android:singleLine="true" />
+                         </com.google.android.material.textfield.TextInputLayout>
+
+                         <com.google.android.material.textfield.TextInputLayout
+                             android:id="@+id/zipcodelayout"
+                             android:layout_width="match_parent"
+                             android:layout_height="wrap_content"
+                             android:layout_marginLeft="16dp"
+                             android:layout_marginRight="16dp"
+                             android:layout_marginTop="10dp">
+
+                             <EditText
+                                 android:id="@+id/zipcode"
+                                 android:layout_width="match_parent"
+                                 android:layout_height="wrap_content"
+                                 android:ems="10"
+                                 android:hint="ZipCode"
+                                 android:singleLine="true" />
+                         </com.google.android.material.textfield.TextInputLayout>
+
+                         <com.google.android.material.textfield.TextInputLayout
+                             android:id="@+id/citylayout"
+                             android:layout_width="match_parent"
+                             android:layout_height="wrap_content"
+                             android:layout_marginLeft="16dp"
+                             android:layout_marginRight="16dp"
+                             android:layout_marginTop="10dp">
+
+                             <EditText
+                                 android:id="@+id/city"
+                                 android:layout_width="match_parent"
+                                 android:layout_height="wrap_content"
+                                 android:ems="10"
+                                 android:hint="City"
+                                 android:singleLine="true" />
+                         </com.google.android.material.textfield.TextInputLayout>
+
+                         <com.google.android.material.textfield.TextInputLayout
+                             android:id="@+id/countrylayout"
+                             android:layout_width="match_parent"
+                             android:layout_height="wrap_content"
+                             android:layout_marginLeft="16dp"
+                             android:layout_marginRight="16dp"
+                             android:layout_marginTop="10dp">
+
+                             <EditText
+                                 android:id="@+id/country"
+                                 android:layout_width="match_parent"
+                                 android:layout_height="wrap_content"
+                                 android:ems="10"
+                                 android:hint="Country"
+                                 android:singleLine="true" />
+                         </com.google.android.material.textfield.TextInputLayout>
+
+                         <com.google.android.material.textfield.TextInputLayout
+                             android:id="@+id/mobilenumber_layout"
+                             android:layout_width="match_parent"
+                             android:layout_height="wrap_content"
+                             android:layout_marginLeft="16dp"
+                             android:layout_marginRight="16dp"
+                             android:layout_marginTop="10dp">
+
+                             <EditText
+                                 android:id="@+id/mobile_number"
+                                 android:layout_width="match_parent"
+                                 android:layout_height="wrap_content"
+                                 android:ems="10"
+                                 android:hint="Mobile Number"
+                                 android:singleLine="true" />
+                         </com.google.android.material.textfield.TextInputLayout>
+
+                     </LinearLayout>
+
+
+                 </RelativeLayout>-->
+
+                <Button
+                    android:id="@+id/siginup"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_horizontal"
+                    android:layout_marginLeft="16dp"
+                    android:layout_marginRight="16dp"
+                    android:layout_marginTop="20dp"
+                    android:background="@drawable/wallet_image2"
+                    android:text="SIGN UP"
+                    android:textAppearance="@style/TextAppearance.AppCompat.Title"
+                    android:textStyle="bold"
+                    android:textAllCaps="true"
+                    android:textColor="@color/white"
+                    android:textSize="18sp"
+                    android:foreground="?selectableItemBackgroundBorderless"/>
+
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="10dp">
+
+
+                </RelativeLayout>
+
+
+            </LinearLayout>
+
+        </RelativeLayout>
+
+</RelativeLayout>
